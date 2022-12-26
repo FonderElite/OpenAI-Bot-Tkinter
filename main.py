@@ -25,7 +25,7 @@ canvas.configure(bg='#1a1a1a')
 canvas.pack()
 
 
-#Open Image
+#Open Image(You can change this)
 img= (Image.open("C:\\Users\\HP\\Downloads\\ai_pic.png"))
  
 
