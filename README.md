@@ -1,2 +1,2 @@
-# OpenAI-Bot-Tkinter
+# 🤖 OpenAI-Bot-Tkinter
 <img src="tkinterai.png">
