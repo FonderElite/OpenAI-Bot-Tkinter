@@ -1,7 +1,6 @@
 # 🤖 OpenAI-Bot-Tkinter
-<img src="tkinterai.png">
 
-## Installation
+## ⬇️ Installation
 ```hs
 $git clone https://github.com/FonderElite/OpenAI-Bot-Tkinter/
 
@@ -10,4 +9,7 @@ $pip3 install
 - tkinter
 - pillow
 ```
+
+## Demo 
+<img src="tkinterai.png">
 
