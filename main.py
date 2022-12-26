@@ -2,13 +2,14 @@ from tkinter import *
 from PIL import ImageTk, Image
 import openai
 
-openai.api_key = "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"
+#Place your OpenAI api key here
+openai.api_key = ""
+
 root = Tk()
 root.title('Intelligent AI')
 root.geometry("540x600")
 root.resizable(True,True)
 
-#Global Values End
 
 #Frame
 frame = Frame(
@@ -26,8 +27,7 @@ canvas.pack()
 
 #Open Image
 img= (Image.open("C:\\Users\\HP\\Downloads\\ai_pic.png"))
-  
-
+ 
 
 #Resize the Image using resize method
 resized_image= img.resize((80,90), Image.ANTIALIAS)
