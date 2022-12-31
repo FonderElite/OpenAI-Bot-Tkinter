@@ -1,15 +1,16 @@
 from tkinter import *
 from PIL import ImageTk, Image
-import openai
+import openai,os,time
+from gtts import gTTS
+import pyttsx3
 
-#Place your OpenAI api key here
-openai.api_key = ""
-
+openai.api_key = "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"
 root = Tk()
 root.title('Intelligent AI')
 root.geometry("540x600")
 root.resizable(True,True)
 
+#Global Values End
 
 #Frame
 frame = Frame(
@@ -25,9 +26,10 @@ canvas.configure(bg='#1a1a1a')
 canvas.pack()
 
 
-#Open Image(You can change this)
+#Open Image
 img= (Image.open("C:\\Users\\HP\\Downloads\\ai_pic.png"))
- 
+  
+
 
 #Resize the Image using resize method
 resized_image= img.resize((80,90), Image.ANTIALIAS)
@@ -51,7 +53,6 @@ enter_url.insert(0,"   Enter Instruction here...")
 enter_url.place(width=520,height=90,x=10, y= 120)
 
 
-
 def execute():
     response = openai.Completion.create(
   model="text-davinci-003",
@@ -62,11 +63,14 @@ def execute():
   frequency_penalty=1,
   presence_penalty=1
      )
-     #insert text to textbox
+       #insert text to textbox
     T.insert(END, response.choices[0].text)
+    #Speak the text
+    engine = pyttsx3.init()
+    engine.say(response.choices[0].text)
+    engine.runAndWait()
+
    
-
-
 def clear():
     T.delete(1.0,END)
     enter_url.delete(0,END)
